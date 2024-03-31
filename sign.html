@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>SIGNUP PAGE</title>
+    </head>
+    <body name="t1" style="background-image:url('signup.jpeg');background-repeat: no-repeat;background-size:cover;">
+
+        <br><br><br><br><br><br>
+        <table border="2px" border-color="chocolate" align="center">
+            <tr><td colspan="2" style="color: aliceblue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                SIGNUP FORM
+            </td></tr>
+            <tr>
+                <td><input type="text" name="em" placeholder="Enter your email"><br><br></td>
+            </tr>
+            <tr>
+                <td><input type="password" name="pass" placeholder="Enter a new password"><br><br></td>
+            </tr>
+            <tr>
+                <td><input type="password" name="cpass" placeholder="confirm your password"><br></td>
+            </tr>
+            <tr><td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Signup" onclick="sub();"></td></tr>
+        </table>
+        <script type="text/javascript">
+            function sub()
+            {
+                alert('you are signed in!');
+                var em1=document.t1.em.value;
+                var password=document.t1.pass.value;
+                var newpassword=document.t1.cpass.value;
+
+                var a=/[A-z]+@[A-z].[A-z]/;
+                var b=em1.match(a);
+                if((em1==null)||(em1!=b))
+                {
+                    alert('You have entered an invalid email!');
+                }
+                var p1=/[A-z]/;
+                var p2=password.match(p1);
+                var p3=newpassword.match(p1);
+                if((password==null)||(password!=p2))
+                {
+                    alert('You have entered an invalid password');
+                }
+                if((p2!=p3))
+                {
+                    alert("confirm your password")
+                }
+                
+            }
+        </script>
+    </body>
+</html>

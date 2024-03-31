@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educate Learning Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .dropdown{
+            color:black;
+        }
+        .dropdown :hover{
+            color:chartreuse;
+        }
+        table td :hover{
+            color:chartreuse;
+        }
+        table td{
+            font-size: 20px;
+            color:rgb(0, 140, 255);
+            align-items:center;
+        }
+        body{
+            background-image: url('bg3.jpeg');
+            background-position: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        b{
+            color:crimson;
+        }
+        .magnify{
+            color:crimson;
+            position: relative;
+            align-items: center;
+
+        }
+        .magnify .fa-solid {
+            position: absolute;
+              top: 47%;
+              left: 10px;
+            transform: translateY(-50%);
+        }
+        .magnify .input-text {
+            width: 160px;
+            border: 0px;
+            background-color: #fff;
+            height: 20px;
+            padding: 8px 8px 8px 35px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+
+
+        
+        #demo{
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+       
+        #demo :hover, #demo :focus {
+            background-color: #2980B9;
+        }
+
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+       
+        .dropdown-content a {
+            color: blueviolet;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .show {
+            display:block;
+        }
+        .footer {
+            width: 100%;
+            height: 12%;
+            display: flex;
+            
+            background-size: 100% 100%;
+            justify-content: center;
+        }
+
+        .footer table td {
+            font-size: 20px;
+         }
+
+    </style>
+</head>
+<body>
+    <section>
+        <nav>
+
+            <table style="width: 100%;">
+               
+                <tr>
+                <td>
+                    <a href="logo.html"><img src="logo.png" width="70" height="50"></a>
+                </td>
+                <td colspan="5" style="font-size: xx-large;" align="center"> 
+                     <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Educate Learning Platform</b>
+                </td>
+                <td>
+                    <div class="magnify">
+                        <i class="fa-solid fa-magnifying-glass" id="demo"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="input-text" type="text" name="search" placeholder="Search here...">
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="dropdown">
+                             &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-bars" onclick="myFunction();"></i>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="home.html">Home</a>
+                                <a href="courses.html">Courses</a>
+                                <a href="certificate.html">My certifications</a>
+                                <a href="sign.html">Sign-up</a>
+                                <a href="login.html">Login</a>
+                                <a href="profile.html">Profile page</a>
+
+                            </div>
+                    </td>
+                </tr>
+            </table>
+        </nav>
+    </section>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+  
+         // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.#demo')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+        }
+    </script>
+    <section>
+        <br><br><br><br><br><br>
+        <h1 align="center">
+            Welcome to our Website.........
+        </h1>
+    </section>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br>
+   
+
+    <section class="footer">
+        
+        </footer>
+        <pre>
+            Contact Details:                         Copyright &copy; 2024|2026                                     For any queries:
+            Sivatmika- 7893896799                                                                             rs200221@rguktsklm.ac.in
+            Nishitha- 7013597490                                                                              rs200278@rguktsklm.ac.in 
+         
+                    
+                        
+
+
+                    </pre>
+        </footer>
+    </section>
+</body>
+</html>
